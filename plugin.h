@@ -12,7 +12,7 @@ typedef void (*on_plugin_update_func)();
 struct plugin {
   void *handle; /* dll handle */
   void *instance;
-  const char *lib_name;  /* dynamic library path */
+  const char *w_lib_path, *s_lib_path;
   uint64_t lib_mod_time; /* last library modification time */
   size_t instance_size;  /* instance size */
 

@@ -34,5 +34,5 @@ void on_plugin_update() {
   //   sprintf(msg, "Player velocity: %i\n", m_instance->velocity);
   //   print_window(msg);
   // }
-  printf("HIIII\n");
+  printf("PLugin is working now!\n");
 }
