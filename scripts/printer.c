@@ -11,20 +11,14 @@ typedef struct printer printer_t;
 
 printer_t *m_instance;
 
-size_t get_instance_size() {
-  printf("hello\n");
-  return sizeof(printer_t);
-}
+size_t get_instance_size() { return sizeof(printer_t); }
 
 /*
  * would be called once the plugin is modified+compiled runtime
  * it is advised to initialize necessary variables in here (such as malloc'ing
  * pointers)
  */
-void on_plugin_reload(void *ptr) {
-  printf("reload\n");
-  m_instance = (printer_t *)ptr;
-}
+void on_plugin_reload(void *ptr) { m_instance = (printer_t *)ptr; }
 
 /* would be called in the update loop */
 void on_plugin_update() {

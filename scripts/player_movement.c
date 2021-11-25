@@ -11,20 +11,14 @@ typedef struct player_motor player_motor_t;
 
 player_motor_t *m_instance;
 
-size_t get_instance_size() {
-  printf("hello\n");
-  return sizeof(player_motor_t);
-}
+size_t get_instance_size() { return sizeof(player_motor_t); }
 
 /*
  * would be called once the plugin is modified+compiled runtime
  * it is advised to initialize necessary variables in here (such as malloc'ing
  * pointers)
  */
-void on_plugin_reload(void *ptr) {
-  printf("reload\n");
-  m_instance = (player_motor_t *)ptr;
-}
+void on_plugin_reload(void *ptr) { m_instance = (player_motor_t *)ptr; }
 
 /* would be called in the update loop */
 void on_plugin_update() {
@@ -34,5 +28,5 @@ void on_plugin_update() {
   //   sprintf(msg, "Player velocity: %i\n", m_instance->velocity);
   //   print_window(msg);
   // }
-  printf("PLugin is working now!\n");
+  printf("Player velocity: %i\n", m_instance->velocity);
 }

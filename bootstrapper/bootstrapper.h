@@ -17,6 +17,7 @@
 
 #define lib_prepath "./bin/runtime_libs/"
 
+void init_plugins();
 void load_plugin_funcs();
 void copy_plugin_libraries();
 void update_plugins();
